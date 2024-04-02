@@ -16,33 +16,40 @@
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "Linkedin",
+        "username": "raphael-guitton",
+        "url": "https://www.linkedin.com/in/raphael-guitton/"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
+      "name": "National Center for Scientific Research, Nantes(France)",
+      "position": "Intern",
+      "url": "https://www.in2p3.cnrs.fr/en",
+      "startDate": "04/03/2024",
+      "endDate": "Now",
+      "summary": "Precision measurement of neutrino oscillation parameters with the JUNO experiment.",
+      "highlights": ["C++, ROOT"]
+    },
     {
-      "organization": "People's Climate March",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
+      "name": "MK2 Software B.V., Haarlem(Netherlands)",
+      "position": "Intern",
+      "url": "https://www.mk2software.nl/",
+      "startDate": "05/2024",
+      "endDate": "08/2024",
+      "summary": "Engineer internship - Data Science Engineer",
+      "highlights": ["SQL, T-SQL, Python"]
+    },
+    {
+      "name": "Jules Verne Technological Research Institute ",
+      "position": "Intern",
+      "url": "https://www.irt-jules-verne.fr/en/",
+      "startDate": "06/2022",
+      "endDate": "07/2022",
+      "summary": "Identification and implementation of a polymerisation law using numerical analysis methods.",
+      "highlights": ["C, Python"]
+    } 
   ],
   "education": [
     {
@@ -71,59 +78,6 @@
       "studyType": " Master's Degree in Subatomic and Astroparticle Physics",
       "startDate": "2023",
       "endDate": "2024"
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
     }
   ],
   "publications": [
