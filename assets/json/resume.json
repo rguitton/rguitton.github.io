@@ -6,7 +6,7 @@
     "email": "rguitton@proton.me",
     "phone": "+3378477843",
     "url": "https://rguitton.github.io/",
-    "summary": "I am a student in ",
+    "summary": "I am a student in the field of particle physics, with experience in experimental and computational methods.",
     "location": {
       "address": "Laboratory of Instrumentation and Experimental Particle Physics",
       "postalCode": "",
@@ -141,7 +141,7 @@
       "name": "Academic project",
       "summary": "An academic project about the JUNO experiment.",
       "highlights": ["Neutrino physics", "C++"],
-      "Date": "2024",
+      "startdate": "2024",
       "url": "https://github.com/rguitton/JUNO"
     }
   ]
