@@ -2,14 +2,12 @@
   "basics": {
     "name": "Raphaël GUITTON",
     "label": "PhD student",
-    "image": "",
     "email": "rguitton@proton.me",
     "phone": "+3378477843",
     "url": "https://rguitton.github.io/",
     "summary": "I am a student in the field of particle physics, with experience in experimental and computational methods.",
     "location": {
       "address": "Laboratory of Instrumentation and Experimental Particle Physics",
-      "postalCode": "",
       "city": "Lisbon",
       "countryCode": "PT",
       "region": ""
@@ -24,7 +22,7 @@
   },
   "work": [
     {
-      "name": "National Center for Scientific Research, Nantes(France)",
+      "name": "National Center for Scientific Research, Nantes (France)",
       "position": "Research Internship",
       "url": "https://www.in2p3.cnrs.fr/en",
       "startDate": "03/2024",
@@ -33,29 +31,28 @@
       "highlights": ["C++, ROOT"]
     },
     {
-      "name": "MK2 Software B.V., Haarlem(Netherlands)",
+      "name": "MK2 Software B.V., Haarlem (Netherlands)",
       "position": "Engineering Internship",
       "url": "https://www.mk2software.nl/",
       "startDate": "05/2023",
       "endDate": "08/2023",
-      "summary": "I had the opportunity to build and manipulate SQL database. I created and utilized user defined functions in T-SQL to study and optimize database functionalities, as well as to construct a storage structure in Azurecloud.",
+      "summary": "I had the opportunity to build and manipulate SQL databases. I created and utilized user-defined functions in T-SQL to study and optimize database functionalities, as well as to construct a storage structure in Azure cloud.",
       "highlights": ["SQL, T-SQL, Python"]
     },
     {
-      "name": "Jules Verne Technological Research Institute ",
+      "name": "Jules Verne Technological Research Institute",
       "position": "Research Internship",
       "url": "https://www.irt-jules-verne.fr/en/",
       "startDate": "06/2022",
       "endDate": "07/2022",
-      "summary": "As an intern at the IRT modelling team, I identified a polymerization law using numerical analysis methods in C and Python and implemented it into a finite element software (PAM-RTM).",
+      "summary": "As an intern at the IRT modeling team, I identified a polymerization law using numerical analysis methods in C and Python and implemented it into a finite element software (PAM-RTM).",
       "highlights": ["C, Python"]
-    } 
+    }
   ],
   "education": [
     {
       "institution": "Lycée Henri Bergson",
       "location": "Angers, France",
-      "url": "",
       "area": "Maths, Physics and Engineering",
       "studyType": "Preparatory Classes for Grandes Écoles (CPGE)",
       "startDate": "2019",
@@ -64,39 +61,35 @@
     {
       "institution": "Télécom Physique Strasbourg",
       "location": "Strasbourg, France",
-      "url": "",
       "area": "Generalist",
-      "studyType": "Engineering Degree, ",
+      "studyType": "Engineering Degree",
       "startDate": "2021",
       "endDate": "2024"
     },
     {
       "institution": "Strasbourg University",
-      "location": "Srasbourg, France",
-      "url": "",
+      "location": "Strasbourg, France",
       "area": "Fundamental physics",
-      "studyType": " Master's Degree in Subatomic and Astroparticle Physics",
+      "studyType": "Master's Degree in Subatomic and Astroparticle Physics",
       "startDate": "2023",
       "endDate": "2024"
     },
     {
       "institution": "Laboratory of Instrumentation and Experimental Particle Physics",
       "location": "Lisbon, Portugal",
-      "url": "",
       "area": "Fundamental physics",
-      "studyType": " PhD",
+      "studyType": "PhD",
       "startDate": "2024",
       "endDate": "2028"
     }
   ],
   "publications": [
-    
     {
       "name": "Thermo-chemical modeling and simulation of glass/elium® acrylic thermoplastic resin composites",
       "publisher": "Material Forming",
       "releaseDate": "2023",
       "url": "https://www.mrforum.com/product/9781644902479-34/",
-      "summary": "My first co author article published regarding my first internship work."
+      "summary": "My first co-author article published regarding my first internship work."
     }
   ],
   "skills": [
@@ -133,9 +126,7 @@
       ]
     }
   ],
-  "references": [
-    
-  ],
+  "references": [],
   "projects": [
     {
       "name": "Academic project",
