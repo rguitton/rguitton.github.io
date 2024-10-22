@@ -141,7 +141,7 @@
       "name": "Academic project",
       "summary": "An academic project about the JUNO experiment.",
       "highlights": ["Neutrino physics", "C++"],
-      "startdate": "2024",
+      "startDate": "2024",
       "url": "https://github.com/rguitton/JUNO"
     }
   ]
