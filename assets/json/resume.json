@@ -1,17 +1,17 @@
 {
   "basics": {
     "name": "Raphaël GUITTON",
-    "label": "CNRS Intern",
+    "label": "PhD student",
     "image": "",
     "email": "rguitton@proton.me",
     "phone": "+3378477843",
-    "url": "https://roronoarapha.github.io",
+    "url": "https://rguitton.github.io/",
     "summary": "I am a student in ",
     "location": {
-      "address": "",
+      "address": "Laboratory of Instrumentation and Experimental Particle Physics",
       "postalCode": "",
-      "city": "Nantes",
-      "countryCode": "FR",
+      "city": "Lisbon",
+      "countryCode": "PT",
       "region": ""
     },
     "profiles": [
@@ -25,29 +25,29 @@
   "work": [
     {
       "name": "National Center for Scientific Research, Nantes(France)",
-      "position": "Intern",
+      "position": "Research Internship",
       "url": "https://www.in2p3.cnrs.fr/en",
-      "startDate": "04/03/2024",
-      "endDate": "Now",
-      "summary": "Precision measurement of neutrino oscillation parameters with the JUNO experiment.",
+      "startDate": "03/2024",
+      "endDate": "08/2024",
+      "summary": "I completed an internship at the CNRS with the NEUTRINO team, where I implemented a method for the precision measurement of neutrino oscillation parameters for the JUNO experiment into a dedicated C++/ROOT framework. This method is now being used directly by the collaboration.",
       "highlights": ["C++, ROOT"]
     },
     {
       "name": "MK2 Software B.V., Haarlem(Netherlands)",
-      "position": "Intern",
+      "position": "Engineering Internship",
       "url": "https://www.mk2software.nl/",
-      "startDate": "05/2024",
-      "endDate": "08/2024",
-      "summary": "Engineer internship - Data Science Engineer",
+      "startDate": "05/2023",
+      "endDate": "08/2023",
+      "summary": "I had the opportunity to build and manipulate SQL database. I created and utilized user defined functions in T-SQL to study and optimize database functionalities, as well as to construct a storage structure in Azurecloud.",
       "highlights": ["SQL, T-SQL, Python"]
     },
     {
       "name": "Jules Verne Technological Research Institute ",
-      "position": "Intern",
+      "position": "Research Internship",
       "url": "https://www.irt-jules-verne.fr/en/",
       "startDate": "06/2022",
       "endDate": "07/2022",
-      "summary": "Identification and implementation of a polymerisation law using numerical analysis methods.",
+      "summary": "As an intern at the IRT modelling team, I identified a polymerization law using numerical analysis methods in C and Python and implemented it into a finite element software (PAM-RTM).",
       "highlights": ["C, Python"]
     } 
   ],
@@ -79,22 +79,18 @@
       "startDate": "2023",
       "endDate": "2024"
     }
+    {
+      "institution": "Laboratory of Instrumentation and Experimental Particle Physics",
+      "location": "Lisbon, Portugal",
+      "url": "",
+      "area": "Fundamental physics",
+      "studyType": " PhD",
+      "startDate": "2024",
+      "endDate": "2028"
+    }
   ],
   "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
+    
     {
       "name": "Die Grundlage der allgemeinen Relativitätstheorie",
       "publisher": "Annalen der Physik",
@@ -120,7 +116,7 @@
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "French",
       "fluency": "Native speaker",
       "icon": ""
     },
@@ -145,16 +141,7 @@
     }
   ],
   "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
+    
   ],
   "projects": [
     {
