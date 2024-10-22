@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /Exercise/
+permalink: /exercise/
 title: Exercise
 description: Some of my work about corrected exercise.
 nav: true
