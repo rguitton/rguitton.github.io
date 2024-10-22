@@ -15,24 +15,16 @@
       institution: Laboratory of Instrumentation and Experimental Particle Physics, Lisbon, Portugal
       year: 2027
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
+        - I will start a PhD a the LIP in Lisbon as part of the CMS team.
+
     - title: Master in Subatomic Physics and Astroparticle  
       institution: University of Strasbourg, Strasbourg, France
       year: 2024
-      description:
-        - Description 1.
-        - Description 2.
+
     - title: Master in General Engenering
       institution: Telecom Physique Strasbourg, Strasbourg, France
       year: 2024
-      description:
-        - Description 1.
-        - Description 2.
+
 
 - title: Experience
   type: time_table
@@ -59,24 +51,20 @@
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: <a href="https://github.com/rguitton/JUNO">JUNO Project</a>
+      year: 2024
+      description: An academic project about the JUNO experiment.
 
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: CMS experiment
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
+        - Higgs boson properties.
+        - Dark matter search.
+   
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Cinema, Running, Moutain biking, etc...
