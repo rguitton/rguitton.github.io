@@ -15,46 +15,44 @@
       institution: Laboratory of Instrumentation and Experimental Particle Physics, Lisbon, Portugal
       year: 2027
       description:
-        - I will start a PhD a the LIP in Lisbon as part of the CMS team.
+        - I will start a PhD at LIP in Lisbon as part of the CMS team.
 
     - title: Master in Subatomic Physics and Astroparticle  
       institution: University of Strasbourg, Strasbourg, France
       year: 2024
 
-    - title: Master in General Engenering
+    - title: Master in General Engineering
       institution: Telecom Physique Strasbourg, Strasbourg, France
       year: 2024
-
 
 - title: Experience
   type: time_table
   contents:
-    - title: Research internship
+    - title: Research Internship
       institution: National Center for Scientific Research (CNRS), Nantes, France
       year: 2024
       description:
         - I completed an internship at the CNRS with the NEUTRINO team, where I implemented a method for the precision measurement of neutrino oscillation parameters for the JUNO experiment into a dedicated C++/ROOT framework. This method is now being used directly by the collaboration.
-        - Description 2.
 
-    - title: Engenering internship
+    - title: Engineering Internship
       institution: MK2 Software, Haarlem, Netherlands
       year: 2023
       description:
-        - I had the opportunity to build and manipulate SQL database. I created and utilized user defined functions in T-SQL to study and optimize database functionalities, as well as to construct a storage structure in Azurecloud.
+        - I had the opportunity to build and manipulate SQL databases. I created and utilized user-defined functions in T-SQL to study and optimize database functionalities, as well as to construct a storage structure in Azure cloud.
 
-    - title: Research internship
-      institution: Jules Verne Technological Research Institure, Nantes, France
+    - title: Research Internship
+      institution: Jules Verne Technological Research Institute, Nantes, France
       year: 2022
-      description: As an intern at the IRT modelling team, I identified a polymerization law using numerical analysis methods in C and Python and implemented it into a finite element software (PAM-RTM).
-    
+      description: 
+        - As an intern at the IRT modeling team, I identified a polymerization law using numerical analysis methods in C and Python and implemented it into a finite element software (PAM-RTM).
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/rguitton/JUNO">JUNO Project</a>
+    - title: JUNO Project
+      url: "https://github.com/rguitton/JUNO"
       year: 2024
       description: An academic project about the JUNO experiment.
-
 
 - title: Academic Interests
   type: nested_list
@@ -63,8 +61,8 @@
       items:
         - Higgs boson properties.
         - Dark matter search.
-   
+
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Cinema, Running, Moutain biking, etc...
+    - Hobbies: Cinema, Running, Mountain biking, etc.
