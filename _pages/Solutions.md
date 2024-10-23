@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /exercise/
-title: Exercise
+permalink: /solution/
+title: Solutions
 description: PDF solutions of some book.
 nav: true
 nav_order: 6
