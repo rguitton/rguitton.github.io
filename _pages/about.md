@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href="https://pages.lip.pt/cms/">Laboratory of Instrumentation and Experimental Particle Physics</a>. CMS experiment. 
+subtitle: <a href="https://www.lip.pt/?lang=en&">Laboratory of Instrumentation and Experimental Particle Physics</a>. CMS experiment. 
 
 profile:
   align: right
