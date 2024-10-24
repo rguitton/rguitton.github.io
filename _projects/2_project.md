@@ -7,7 +7,7 @@ importance: 3
 category: work
 ---
 
-I had the opportunity study and modelize some aspect of the JUNO detector as an academic project with [Felix Touchte Codjo](https://ftouchte.github.io/). 
+I had the opportunity to study and modelize some aspect of the JUNO detector as an academic project with [Felix Touchte Codjo](https://ftouchte.github.io/). 
 
 Check out our [article](../assets/pdf/JUNO/TIPP_Article.pdf), and our [slide](../assets/pdf/JUNO/Presentation_TIPP_JUNO.pdf).
 
