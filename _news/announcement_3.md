@@ -18,6 +18,7 @@ The subject of my
     <li>Machine learning</li>
 </ul>
 
-> An inspiring quote about starting a PhD
+> An inspiring quote about starting a PhD.
 > —An inspiring person
 
+---
