@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 3
+title: JUNO project
 description: An academic project about the JUNO detector
 img: assets/img/JUNO/JUNO-detector.jpg
 redirect: https://github.com/rguitton/JUNO
