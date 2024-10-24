@@ -4,7 +4,7 @@ title: Gallery application
 description: A photo gallery application project
 img: assets/img/project_gallery/people_phone.jpg
 importance: 1
-category: work
+category: fun
 related_publications: false
 giscus_comments: true
 ---
