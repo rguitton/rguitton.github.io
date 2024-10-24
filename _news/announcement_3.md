@@ -10,7 +10,7 @@ I will join the LIP laboratory in November to start a PhD as part of the CMS tea
 
 
 
-#### Hipster list
+#### PhD Topic
 
 <ul>
     <li>Higgs Physics</li>
