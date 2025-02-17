@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Started a PhD
-date: 2024-10-01 16:11:00-0400
+title: PhD
+date: 2025-02-01 16:11:00-0400
 inline: false
 related_posts: false
 ---
 
-I will join the LIP laboratory in November to start a PhD as part of the CMS team.
+I started a PhD at the Instituto Superior Técnico, working at the LIP.
+ 
 
 
 
