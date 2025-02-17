@@ -12,10 +12,25 @@ Inverse Transform Sampling
 
 For example, to compute an integral like:
 
-$I = \int_a^b f(x) dx$
+$$I = \int_a^b f(x) dx$$
 
 Monte Carlo approximates it by taking **random samples $x_i$  in [a,b]** and computing:
 
-$I \approx \frac{b-a}{N} \sum_{i=1}^{N} f(x_i)$
+$$I \approx \frac{b-a}{N} \sum_{i=1}^{N} f(x_i)$$
 
 But how to you choose the $x_i$ ?
+
+At first glance we might choose to choose $x_i$ from an uniform distribution along $[a,b]$.
+
+However this way of thinking is not optimal at all, as it might lead to inacuarate integral approximation. 
+
+That is where Inverse Transform Sampling can be helpful. 
+
+
+$$F_X(x) = \int_{-\infty}^{x} f_X(t) \, dt$$
+
+
+$$\lim_{x \to +\infty} F_X(x)=1$$
+
+
+$$f_X(x) = \frac{d}{dx} F_X(x)$$
