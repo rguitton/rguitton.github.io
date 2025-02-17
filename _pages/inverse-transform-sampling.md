@@ -29,6 +29,14 @@ That is where Inverse Transform Sampling can be helpful.
 
 $$F_X(x) = \int_{-\infty}^{x} f_X(t) \, dt$$
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/statistics.ITS/cdf-pdf.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Relation between CDF and PDF.
+</div>
 
 $$\lim_{x \to +\infty} F_X(x)=1$$
 
