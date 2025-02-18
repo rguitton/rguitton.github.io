@@ -23,17 +23,18 @@ layout: default
   {% endif %}
 </div>
 {% if page.chapter %}
-  {% assign pages = site.chapters | where: "chapter", page.chapter | sort: "order" %}
-  {% if pages.size > 0 %}  {% assign current_index = pages | index: page %}
-    {% if current_index %}  {% assign prev_index = current_index | minus: 1 %}
+  {% assign pages = site.chapters | where: "chapter", page.chapter %}
+  {% if pages.size > 0 %}
+    {% assign pages = pages | sort: "order" %}
+    {% assign current_index = pages | index: page %}
+
+    {% if current_index %}
+      {% assign prev_index = current_index | minus: 1 %}
       {% assign next_index = current_index | plus: 1 %}
+      {% assign last_index = pages.size | minus: 1 %}
 
       <div class="navigation">
-        {% assign page_count = pages.size %}  {% if current_index < page_count | minus: 1 %}
-          <a href="{{ pages[next_index].url }}" class="next-page">Page suivante</a>
-        {% endif %}
-
-        {% if current_index < pages.size | minus: 1 %}
+        {% if current_index < last_index %}
           <a href="{{ pages[next_index].url }}" class="next-page">Page suivante</a>
         {% endif %}
       </div>
