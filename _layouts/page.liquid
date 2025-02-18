@@ -29,8 +29,8 @@ layout: default
       {% assign next_index = current_index | plus: 1 %}
 
       <div class="navigation">
-        {% if current_index > 0 %}
-          <a href="{{ pages[prev_index].url }}" class="previous-page">Page précédente</a>
+        {% assign page_count = pages.size %}  {% if current_index < page_count | minus: 1 %}
+          <a href="{{ pages[next_index].url }}" class="next-page">Page suivante</a>
         {% endif %}
 
         {% if current_index < pages.size | minus: 1 %}
