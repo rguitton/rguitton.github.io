@@ -1,19 +1,33 @@
 ---
 layout: page
-permalink: /inverse-transform-sampling/
-title: Inverse Transform Sampling
-description: An introduction to Inverse Transform Sampling
+permalink: /monte-carlo/
+title: Monte Carlo Simulation
+description: An introduction to the Monte Carlo method
 nav: false
-nav_order: 8
 ---
 
-## Inverse Transform Sampling
+## Monte Carlo 
 
-For example, to compute an integral like:
+To simulate events in physics one has to perfom a lot of integral. 
+#TODO trouver un evenement et une fonction à integrer pour illustrer le principe de Monte carlo 
+
+For exemple we might need to integrate the function $f(x)$ over [a,b]: 
+$$I=\int_a^bf(x)\,dx$$
+To do this we could use the basic numerical method such as the trapzeoidale rule, the simpson rule, etc...
+Those methode are efficient for a integral at low dimension, and converge with $\propto \frac{1}{N^2}$ for the trapzeoidale method and $\propto \frac{1}{N^4}$ for the simpson rule for a one dimension integral. However, for a integral over $d$ dimensions, the convergence is goes to $\propto \frac{1}{N^{2/d}}$ and $\propto \frac{1}{N^{4/d}}$.
+
+On the other hand, a Monce Carlo method converge $\propto \frac{1}{\sqrt{N}}=\frac{1}{N^{\frac{1}{2}}}$ for any dimensions integral. 
+For a 4 (8) dimensional integral the MC method converge as fast as the trapezoidale (simpson) rule, and faster for higher dimension.
+
+A Monte Carlo method is any method that make use of Random numbers and probability statistics to solve a problem.
+The law of Large number  tells us that if we take a sequence of independent and identically distributed (iid) random variables $X_i$ with an expectation $\mathbb{E}[X]$, then the empirical mean converges almost surely to the expectation:
+$$\frac{1}{N} \sum_{i=1}^{N} X_i \quad \xrightarrow{N \to \infty} \quad \mathbb{E}[X]$$
+
+
 
 $$I = \int_a^b f(x) dx$$
 
-Monte Carlo approximates it by taking **random samples $x_i$ in [a,b]** and computing:
+T approximates it by taking **random samples $x_i$ in [a,b]** and computing:
 
 $$I \approx \frac{b-a}{N} \sum_{i=1}^{N} f(x_i)$$
 
@@ -55,6 +69,7 @@ If we were to use the PDF directly, we would not have a unique mapping between $
 Thus, without the CDF, multiple values of $X$ could correspond to the same $U$, making the transformation ambiguous. The CDF guarantees a well-defined inverse mapping, allowing us to efficiently sample from the target distribution.
 
 From the law of large number we know that the integral $I=\int f(x)$
+
 [!NOTE]
 <div id="markdown-container">
 <details>
