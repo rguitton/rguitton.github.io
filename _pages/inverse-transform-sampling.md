@@ -4,7 +4,8 @@ permalink: /inverse-transform-sampling/
 title: Inverse Transform Sampling
 description: An introduction to Inverse Transform Sampling
 nav: false
-nav_order: 8
+chapter: introduction_aux_methodes_numeriques  
+order: 2   
 ---
 ### Sampling Choice
 
