@@ -6,6 +6,9 @@ description: An introduction to Inverse Transform Sampling
 nav: false
 nav_order: 8
 ---
+### Sampling Choice
+
+A common initial approach is to sample the $x_i$ uniformly over the interval $[a,b]$. However, uniform sampling might not be optimal if $f(x)$ varies significantly over the domain. Instead, importance sampling recommends choosing a pdf $p(x)$ that closely approximates the shape of $f(x)$ (or $|f(x)|$) to reduce the variance of the estimator.
 
 ## Inverse Transform Sampling
 

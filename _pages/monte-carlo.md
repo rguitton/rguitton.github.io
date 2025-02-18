@@ -5,78 +5,137 @@ title: Monte Carlo Simulation
 description: An introduction to the Monte Carlo method
 nav: false
 ---
+## Numerical Integration
 
-## Monte Carlo 
+In physics and many applied sciences, computing integrals is essential for modeling real-world phenomena. Whether it is to evaluate physical quantities such as energy, probability distributions, or statistical expectations, integration appears in many contexts. However many integrals cannot be solved analytically, requiring **numerical methods** for their evaluation.
 
-To simulate events in physics one has to perfom a lot of integral. 
-#TODO trouver un evenement et une fonction à integrer pour illustrer le principe de Monte carlo 
+For example, we often need to compute the integral of a function $f(x)$ over an interval $[a,b]$:
 
-For exemple we might need to integrate the function $f(x)$ over [a,b]: 
-$$I=\int_a^bf(x)\,dx$$
-To do this we could use the basic numerical method such as the trapzeoidale rule, the simpson rule, etc...
-Those methode are efficient for a integral at low dimension, and converge with $\propto \frac{1}{N^2}$ for the trapzeoidale method and $\propto \frac{1}{N^4}$ for the simpson rule for a one dimension integral. However, for a integral over $d$ dimensions, the convergence is goes to $\propto \frac{1}{N^{2/d}}$ and $\propto \frac{1}{N^{4/d}}$.
+$$I=\int_a^b f(x)\,dx.$$
 
-On the other hand, a Monce Carlo method converge $\propto \frac{1}{\sqrt{N}}=\frac{1}{N^{\frac{1}{2}}}$ for any dimensions integral. 
-For a 4 (8) dimensional integral the MC method converge as fast as the trapezoidale (simpson) rule, and faster for higher dimension.
+---
 
-A Monte Carlo method is any method that make use of Random numbers and probability statistics to solve a problem.
-The law of Large number  tells us that if we take a sequence of independent and identically distributed (iid) random variables $X_i$ with an expectation $\mathbb{E}[X]$, then the empirical mean converges almost surely to the expectation:
-$$\frac{1}{N} \sum_{i=1}^{N} X_i \quad \xrightarrow{N \to \infty} \quad \mathbb{E}[X]$$
+### From Continuous to Discrete
 
+By definition, the **definite integral** of a continuous function $f$ over the interval $[a, b]$, denoted as:
 
+$$I = \int_a^b f(x)\,dx,$$
 
-$$I = \int_a^b f(x) dx$$
+is the **limit of a Riemann sum** as the number of subdivisions $n$ approaches infinity:
 
-T approximates it by taking **random samples $x_i$ in [a,b]** and computing:
+$$\int_{a}^{b} f(x)dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i) \Delta x,$$
 
-$$I \approx \frac{b-a}{N} \sum_{i=1}^{N} f(x_i)$$
+where $ \Delta x = \frac{b-a}{n} $ and $ x_i = a + i \cdot \Delta x $ (left point approximation).
 
-But how do you choose the $x_i$?
+As we increase the number of subdivisions $n$, the Riemann sum becomes a better approximation of the integral. This can be visualized in the following animation:
 
-At first glance, we might choose $x_i$ from a uniform distribution along $[a,b]$. However, this method is not optimal, as it may lead to inaccurate integral approximations. This is where Inverse Transform Sampling becomes useful.
-
-### The Role of the CDF
-
-Inverse Transform Sampling relies on the cumulative distribution function (CDF):
-
-$$F_X(x) = \int_{-\infty}^{x} f_X(t) \, dt$$
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/statistics/ITS/cdf-pdf.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Relation between CDF and PDF.
+<div align="center">
+  <img src="../assets/img/statistics/Riemann_sum.gif" alt="Riemann Sum Approximation" width="300">
 </div>
 
-$$\lim_{x \to +\infty} F_X(x)=1$$
+Each rectangle has an area of $f(x_i) \Delta x$ and is chosen regularly, meaning that the points $x_i$ are equally spaced.
 
-$$f_X(x) = \frac{d}{dx} F_X(x)$$
+### Equivalence with Uniform Sampling
 
-Using the CDF instead of the PDF provides a **bijective** relationship between $[0,1]$ and $[a,b]$. Without the CDF, a value like 0.2 could correspond to multiple values in $[a,b]$, making transformation ambiguous.
+In the **Riemann sum** integration method, and other classical methods, the entire interval $[a, b]$ is represented equally. Similarly, instead of summing over regularly spaced points, we could choose a **random variable** $ X $ following a **uniform probability density function** over $[a, b]$, given by:
 
-### How Inverse Transform Sampling Works
+$$p(x) = \frac{1}{b-a}, \quad x \in [a, b].$$
 
-In Inverse Transform Sampling, we generate a random number $U$ uniformly distributed over $[0,1]$ and apply the inverse CDF ($F^{-1}$) to obtain a corresponding value $X$ in the target interval $[a,b]$:
+Rewriting the Riemann sum using this random variable, we obtain the following approximation:
 
-$$X = F^{-1}(U)$$
+$$I \approx (b-a) \cdot \frac{1}{N} \sum_{i=1}^{N} f(X_i),$$
 
-The key insight is that the CDF increases when the PDF is nonzero and remains constant when the PDF is zero. If we sample uniformly along the y-axis from $[0,1]$, we are more likely to land in a region where the CDF is increasing rather than where it is flat. This ensures that our samples are more frequently drawn from regions where the PDF is nonzero, improving the efficiency of sampling.
+where $ X_i \sim \mathcal{U}(a, b) $ are $ N $ independent and identically distributed (i.i.d.) random samples.
 
-If we were to use the PDF directly, we would not have a unique mapping between $U$ and $X$ because the PDF represents density rather than a one-to-one correspondence. However, since the CDF is strictly increasing for a continuous distribution, each $U$ in $[0,1]$ corresponds uniquely to a single $X$ in $[a,b]$, ensuring invertibility.
+> The key observation here is that the order of summation does not matter, as long as all parts of the interval are represented equally. We expect to obtain the same integral estimation choosing the $x_i$ from an uniform distribution as the Riemann sum for a sufficiently large number of points.
 
-Thus, without the CDF, multiple values of $X$ could correspond to the same $U$, making the transformation ambiguous. The CDF guarantees a well-defined inverse mapping, allowing us to efficiently sample from the target distribution.
+This formulation forms the basis of the **Monte Carlo integration method**, where instead of using a regular grid, we estimate the integral by taking random samples.
 
-From the law of large number we know that the integral $I=\int f(x)$
+> **Monte Carlo methods are techniques that use random sampling and probability statistics to solve problems, particularly those involving integration and optimization.**
 
-[!NOTE]
-<div id="markdown-container">
+
+
+### Alternative Numerical Methods
+
+Several classical numerical methods exist to approximate the value of an integral.
+
+- One such method is the **trapezoidal rule**, which approximates the integral as:
+     $$I \approx \frac{\Delta x}{2} \sum_{i=0}^{N-1} (f(x_i) + f(x_{i+1}))$$
+
+ - Another common approach is **Simpson’s rule**, which provides a higher-order approximation using parabolic interpolation:
+
+$$I \approx \frac{\Delta x}{3} \sum_{i=0}^{N/2} \big( f(x_{2i}) + 4f(x_{2i+1}) + f(x_{2i+2}) \big)$$
+
+ - etc...
+
+For a one dimension integral, those two methode have a convergence rates proportionnal to $\propto(1/N^{2})$ for the trapezoidale method and $\propto(1/N^{4})$ for the simpson one.
+
+However for a **$d$-dimensional integral** their convergence rates decrease as $\propto(1/N^{2/d})$ for the trapedoidale method and $\propto(1/N^{4/d})$ for the simpsons one.
+
+As $d$ increases, these deterministic methods become inefficient due to the **curse of dimensionality**.
+
+### Monte Carlo Integration
+
+An alternative approach is **Monte Carlo integration**, which relies on random sampling rather than a structured grid.
+
+The key advantage of Monte Carlo methods is that their convergence rate is **independent of dimension** and proportionnal to $\propto(1/\sqrt{N})$
+
+For a **4d integral**, Monte Carlo converges as fast as the trapezoidal rule. For an **8d integral**, it converges as fast as Simpson’s rule. And for higher dimensions, Monte Carlo becomes significantly more efficient.
+
+We previously considered Monte Carlo integration using a uniform distribution, but we can generalize this idea by using any probability density function (PDF).
+Consider then a random variable $X$ with probability density function $p(x)$, the transfer theorem gives:
+$\mathbb{E}(f(X)) = \int_a^b f(x) p(x) \, \mathrm{d}x.$
+
+<div id="transfert-theorem">
 <details>
-<summary>Law of large numbers</summary>
+<summary>About Transfer Theorem</summary>
 
-> The law of large numbers tells us that if we take a sequence of independent and identically distributed (iid) random variables $X_i$ with an expectation $\mathbb{E}[X]$, then the empirical mean converges almost surely to the expectation:
-> $\frac{1}{N} \sum_{i=1}^{N} X_i \quad \xrightarrow{N \to \infty} \quad \mathbb{E}[X]$
+> The transfer theorem is a fundamental theorem in probability theory that allows us to express the expectation of a function of a random variable $X$ as an integral against the law of $X$. Its general form is as follows:
+
+> **Theorem:** Let $(\Omega, \mathcal{B}, \mathbb{P})$ be a probability space and let $X: (\Omega, \mathcal{A}, \mathbb{P}) \to \mathbb{R}$ be a random variable whose law is denoted by $\mathbb{P}_X$. Then:
+> 1. For any measurable function $\varphi: \mathbb{R} \to \mathbb{R}_+$ , we have:
+    $\int_{\Omega} \varphi(X(\omega)) \, \mathrm{d}\mathbb{P}(\omega) = \int_{\mathbb{R}} \varphi(x) \, \mathrm{d}\mathbb{P}_X(x)$
 
 </details>
 </div>
+
+If our goal is to compute the integral of $f(x)$, we can rewrite it as
+
+$$I = \int_a^b f(x) \, dx = \int_a^b \frac{f(x)}{p(x)} \, p(x) \, dx = \mathbb{E}\left[\frac{f(X)}{p(X)}\right] $$
+
+From the Law of large number we get that 
+$$\mathbb{E} \left( \frac{f(X)}{p(X)} \right) =  \int_a^b \frac{f(x)}{p(x)} p(x) dx \approx \frac{1}{N} \sum_{i=1}^{N} \frac{f(x_i)}{p(x_i)} = I_N $$
+<div id="law-of-large-number">
+<details>
+<summary>About Law of Large Number</summary>
+
+> The law of Large number  tells us that if we take a sequence of independent and identically distributed (i.i.d) random variables $X_i$ with an expectation $\mathbb{E}[X]$, then the empirical mean converges almost surely to the expectation:
+> $$\frac{1}{N} \sum_{i=1}^{N} X_i \quad \xrightarrow{N \to \infty} \quad \mathbb{E}[X]$$
+
+</details>
+</div>
+
+Ok but now, how do you choose your pdf ? Well, we will see that the choice of the pdf is really important in regards of the uncertainties for the estimated integral value.
+
+### Chose of pdf and Unvertainties 
+
+The Central Limit Theorem (CLT) tells us that for sufficiently large $N$, the distribution of $I_N$ is approximately normal:
+
+$$I_N \approx \mathcal{N} \left( I, \frac{\sigma^2}{N} \right)$$
+with $$\sigma^2 = \mathbb{V} \left[ \frac{f(X)}{p(X)} \right]$$
+
+<div id="central-limit">
+<details>
+<summary>About central limit</summary>
+
+> The Central Limit Theorem states that, given a sufficiently large sample size, the distribution of the sample mean of i.i.d. random variables approaches a normal distribution, regardless of  the original distribution of the variables.
+
+</details>
+</div>
+
+
+**The choice of the pdf $p(x)$ directly influences $\sigma^2$ and, consequently, the uncertainty in the estimated integral.**
+By selecting an appropriate PDF, we can significantly improve the accuracy and efficiency of Monte Carlo integration.
+
+
+Rest on another page
