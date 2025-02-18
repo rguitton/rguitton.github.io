@@ -23,25 +23,22 @@ layout: default
   {% endif %}
 </div>
 {% if page.chapter %}
-  {% assign pages = site.chapters | where: "chapter", page.chapter %}
-  {% if pages.size > 0 %}
-    {% assign pages = pages | sort: "order" %}
+  {% assign pages = site.pages | where: "chapter", page.chapter | sort: "order" %}
 
-    {% assign current_index = -1 %}
-    {% for p in pages %}
-      {% if p.url == page.url %}
-        {% assign current_index = forloop.index0 %}
-      {% endif %}
-    {% endfor %}
+  {% assign current_index = -1 %}
+  {% for p in pages %}
+    {% if p.url == page.url %}
+      {% assign current_index = forloop.index0 %}
+    {% endif %}
+  {% endfor %}
 
-    {% assign last_index = pages.size | minus: 1 %}
-    {% assign next_index = current_index | plus: 1 %}
+  {% assign last_index = pages.size | minus: 1 %}
+  {% assign next_index = current_index | plus: 1 %}
 
-    <div class="navigation">
-      {% if current_index > -1 and next_index < pages.size %}
-        <a href="{{ pages[next_index].url }}" class="next-page">Page suivante</a>
-      {% endif %}
-    </div>
-  {% endif %}
+  <div class="navigation">
+    {% if current_index > -1 and next_index < pages.size %}
+      <a href="{{ pages[next_index].url }}" class="next-page">Page suivante</a>
+    {% endif %}
+  </div>
 {% endif %}
 
