@@ -4,6 +4,8 @@ permalink: /monte-carlo/
 title: Monte Carlo Simulation
 description: An introduction to the Monte Carlo method
 nav: false
+chapter: introduction_aux_methodes_numeriques  
+order: 1                                      
 ---
 ## Numerical Integration
 
@@ -63,10 +65,7 @@ Several classical numerical methods exist to approximate the value of an integra
      $$I \approx \frac{\Delta x}{2} \sum_{i=0}^{N-1} (f(x_i) + f(x_{i+1}))$$
 
  - Another common approach is **Simpson’s rule**, which provides a higher-order approximation using parabolic interpolation:
-
-$$I \approx \frac{\Delta x}{3} \sum_{i=0}^{N/2} \big( f(x_{2i}) + 4f(x_{2i+1}) + f(x_{2i+2}) \big)$$
-
- - etc...
+$$I \approx \frac{\Delta x}{3} \sum_{i=0}^{N/2}  f(x_{2i}) + 4f(x_{2i+1}) + f(x_{2i+2}) \$$
 
 For a one dimension integral, those two methode have a convergence rates proportionnal to $\propto(1/N^{2})$ for the trapezoidale method and $\propto(1/N^{4})$ for the simpson one.
 

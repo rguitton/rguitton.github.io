@@ -22,3 +22,16 @@ layout: default
     {% include giscus.liquid %}
   {% endif %}
 </div>
+{% if page.chapter %}  {% assign pages = site.chapters | where: "chapter", page.chapter | sort: "order" %}
+  {% assign current_index = pages | index: page %}
+
+  <div class="navigation">
+    {% if current_index > 0 %}
+      <a href="{{ pages[current_index - 1].url }}" class="previous-page">Page précédente</a>
+    {% endif %}
+
+    {% if current_index < pages.size - 1 %}
+      <a href="{{ pages[current_index + 1].url }}" class="next-page">Page suivante</a>
+    {% endif %}
+  </div>
+{% endif %}
