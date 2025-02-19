@@ -34,10 +34,15 @@ layout: default
 
   {% assign last_index = pages.size | minus: 1 %}
   {% assign next_index = current_index | plus: 1 %}
+  {% assign prev_index = current_index | minus: 1 %}
 
   <div class="navigation">
-    {% if current_index > -1 and next_index < pages.size %}
-      <a href="{{ pages[next_index].url }}" class="next-page">Page suivante</a>
+    {% if prev_index >= 0 %}
+      <a href="{{ pages[prev_index].url }}" class="prev-page">Previous: {{ pages[prev_index].title }}</a>
+    {% endif %}
+
+    {% if next_index < pages.size %}
+      <a href="{{ pages[next_index].url }}" class="next-page">Next: {{ pages[next_index].title }}</a>
     {% endif %}
   </div>
 {% endif %}
