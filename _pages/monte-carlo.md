@@ -11,7 +11,7 @@ order: 2
 
 In physics and many applied sciences, computing integrals is essential for modeling real-world phenomena. Whether it is to evaluate physical quantities such as energy, probability distributions, or statistical expectations, integration appears in many contexts. However many integrals cannot be solved analytically, requiring **numerical methods** for their evaluation.
 
-For example, we often need to compute the integral of a function \(f(x)\) over an interval\([a,b]$:
+For example, we often need to compute the integral of a function \\(f(x)\\) over an interval\([a,b]\):
 
 $$I=\int_a^b f(x)\,dx.$$
 
@@ -69,7 +69,7 @@ Several classical numerical methods exist to approximate the value of an integra
 
 For a one dimension integral, those two methode have a convergence rates proportionnal to \(\propto(1/N^{2}) \)for the trapezoidale method and \(\propto(1/N^{4}) \)for the simpson one.
 
-However for a **$d$-dimensional integral** their convergence rates decrease as \(\propto(1/N^{2/d}) \)for the trapedoidale method and \(\propto(1/N^{4/d}) \)for the simpsons one.
+However for a **$d$-dimensional integral** their convergence rates decrease as \( \propto(1/N^{2/d}) \) for the trapedoidale method and \(\propto(1/N^{4/d}) \)for the simpsons one.
 
 As \(d \)increases, these deterministic methods become inefficient due to the **curse of dimensionality**.
 
@@ -121,7 +121,7 @@ Ok but now, how do you choose your pdf ? Well, we will see that the choice of th
 The Central Limit Theorem (CLT) tells us that for sufficiently large \(N \), the distribution of \(I_N \)is approximately normal:
 
 $$I_N \approx \mathcal{N} \left( I, \frac{\sigma^2}{N} \right)$$
-with \($\sigma^2 = \mathbb{V} \left[ \frac{f(X)}{p(X)} \right]$$
+with $$\sigma^2 = \mathbb{V} \left[ \frac{f(X)}{p(X)} \right]$$
 
 <div id="central-limit">
 <details>
