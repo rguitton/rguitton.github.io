@@ -5,7 +5,7 @@ title: Inverse Transform Sampling
 description: An introduction to Inverse Transform Sampling
 nav: false
 chapter: introduction_aux_methodes_numeriques  
-order: 2   
+order: 3   
 ---
 ### Sampling Choice
 

@@ -5,7 +5,7 @@ title: Monte Carlo Simulation
 description: An introduction to the Monte Carlo method
 nav: false
 chapter: introduction_aux_methodes_numeriques  
-order: 1                                      
+order: 2                                    
 ---
 ## Numerical Integration
 
