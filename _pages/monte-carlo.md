@@ -11,7 +11,7 @@ order: 2
 
 In physics and many applied sciences, computing integrals is essential for modeling real-world phenomena. Whether it is to evaluate physical quantities such as energy, probability distributions, or statistical expectations, integration appears in many contexts. However many integrals cannot be solved analytically, requiring **numerical methods** for their evaluation.
 
-For example, we often need to compute the integral of a function \\(f(x)\\) over an interval\([a,b]\):
+For example, we often need to compute the integral of a function $`f(x)`$ over an interval\([a,b]\):
 
 $$I=\int_a^b f(x)\,dx.$$
 
