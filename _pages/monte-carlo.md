@@ -27,7 +27,7 @@ is the **limit of a Riemann sum** as the number of subdivisions $n$ approaches i
 
 $$\int_{a}^{b} f(x)dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i) \Delta x,$$
 
-where $ \Delta x = \frac{b-a}{n} $ and $ x_i = a + i \cdot \Delta x $ (left point approximation).
+where $\Delta x = \frac{b-a}{n}$ and $x_i = a + i \cdot \Delta x$ (left point approximation).
 
 As we increase the number of subdivisions $n$, the Riemann sum becomes a better approximation of the integral. This can be visualized in the following animation:
 
@@ -39,7 +39,7 @@ Each rectangle has an area of $f(x_i) \Delta x$ and is chosen regularly, meaning
 
 ### Equivalence with Uniform Sampling
 
-In the **Riemann sum** integration method, and other classical methods, the entire interval $[a, b]$ is represented equally. Similarly, instead of summing over regularly spaced points, we could choose a **random variable** $ X $ following a **uniform probability density function** over $[a, b]$, given by:
+In the **Riemann sum** integration method, and other classical methods, the entire interval $[a, b]$ is represented equally. Similarly, instead of summing over regularly spaced points, we could choose a **random variable** $X$ following a **uniform probability density function** over $[a, b]$, given by:
 
 $$p(x) = \frac{1}{b-a}, \quad x \in [a, b].$$
 
@@ -47,7 +47,7 @@ Rewriting the Riemann sum using this random variable, we obtain the following ap
 
 $$I \approx (b-a) \cdot \frac{1}{N} \sum_{i=1}^{N} f(X_i),$$
 
-where $ X_i \sim \mathcal{U}(a, b) $ are $ N $ independent and identically distributed (i.i.d.) random samples.
+where $X_i \sim \mathcal{U}(a, b)$ are $N$ independent and identically distributed (i.i.d.) random samples.
 
 > The key observation here is that the order of summation does not matter, as long as all parts of the interval are represented equally. We expect to obtain the same integral estimation choosing the $x_i$ from an uniform distribution as the Riemann sum for a sufficiently large number of points.
 
@@ -65,7 +65,7 @@ Several classical numerical methods exist to approximate the value of an integra
      $$I \approx \frac{\Delta x}{2} \sum_{i=0}^{N-1} (f(x_i) + f(x_{i+1}))$$
 
  - Another common approach is **Simpson’s rule**, which provides a higher-order approximation using parabolic interpolation:
-$$I \approx \frac{\Delta x}{3} \sum_{i=0}^{N/2}  f(x_{2i}) + 4f(x_{2i+1}) + f(x_{2i+2}) \$$
+    $$I\approx\frac{\Delta x}{3}\sum_{i=0}^{N/2} f(x_{2i})+4f(x_{2i+1})+f(x_{2i+2})$$
 
 For a one dimension integral, those two methode have a convergence rates proportionnal to $\propto(1/N^{2})$ for the trapezoidale method and $\propto(1/N^{4})$ for the simpson one.
 
