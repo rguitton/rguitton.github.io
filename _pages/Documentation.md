@@ -7,6 +7,8 @@ nav: true
 nav_order: 8
 display_categories: [Statistics, Physics]
 horizontal: false
+chapter: introduction_aux_methodes_numeriques  
+order: 1   
 ---
 
 <!-- pages/projects.md -->
