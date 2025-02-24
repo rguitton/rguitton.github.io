@@ -106,7 +106,7 @@ $$\mathbb{E} \left( \frac{f(X)}{p(X)} \right) =\int_a^b \frac{f(x)}{p(x)} p(x) d
 <details>
 <summary>About Law of Large Number</summary>
 
-> The law of Large number tells us that if we take a sequence of independent and identically distributed (i.i.d) random variables $$X_i$$ with an expectation $$\mathbb{E}[X]$$, then the empirical mean converges almost surely to the expectation:
+> The law of Large number tells us that if we take a sequence of independent and identically distributed (i.i.d) random variables $$X_i$$ with an expectation $$\mathbb{E}[X]$$, then the empirical mean converges to the expectation:
 > $$\frac{1}{N} \sum_{i=1}^{N} X_i \quad \xrightarrow{N \to \infty} \quad \mathbb{E}[X]$$
 
 </details>
