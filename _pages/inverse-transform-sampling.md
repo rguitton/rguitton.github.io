@@ -7,6 +7,10 @@ nav: false
 chapter: introduction_aux_methodes_numeriques  
 order: 3   
 ---
+
+### Under development
+
+<!---
 ### Sampling Choice
 
 A common initial approach is to sample the $x_i$ uniformly over the interval $[a,b]$. However, uniform sampling might not be optimal if $f(x)$ varies significantly over the domain. Instead, importance sampling recommends choosing a pdf $p(x)$ that closely approximates the shape of $f(x)$ (or $|f(x)|$) to reduce the variance of the estimator.
@@ -69,3 +73,4 @@ From the law of large number we know that the integral $I=\int f(x)$
 
 </details>
 </div>
+-->

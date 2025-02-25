@@ -3,7 +3,7 @@ layout: page
 title: Documentation
 permalink: /Documentation/
 description: Some documentation about how CMS works.
-nav: false
+nav: True
 nav_order: 8
 display_categories: [Statistics, Physics]
 horizontal: false
